@@ -1,0 +1,3 @@
+<hr> 
+
+# DOCUMENTATION FOOTER

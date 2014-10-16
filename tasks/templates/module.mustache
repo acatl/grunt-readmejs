@@ -1,0 +1,56 @@
+{{#.}}
+
+## {{basename}}
+{{#options.showFilePath}}
+_{{{filepath}}}_
+{{/options.showFilePath}}
+
+{{#content}}
+{{#description.summary}}
+### Summary
+{{{description.summary}}}
+{{/description.summary}}
+
+{{#tags}}
+**{{{type}}}**: &nbsp;{{#types}}`{{.}}` {{/types}} {{{string}}} {{#parent}}`{{{parent}}}`{{/parent}}
+{{/tags}}
+
+{{#ctx}}
+### Syntax
+{{#ctx.isConstructor}}
+`new {{name}}({{ctx.parameters}})`
+{{/ctx.isConstructor}}
+{{#ctx.isFunction}}
+`{{name}}({{ctx.parameters}})`
+{{/ctx.isFunction}}
+{{#ctx.isDeclaration}}
+`{{name}}` {{#value}}: `{{{value}}}`{{/value}}
+{{/ctx.isDeclaration}}
+{{#ctx.isProperty}}
+`{{name}}` {{#value}}: `{{{value}}}`{{/value}}
+{{/ctx.isProperty}}
+{{/ctx}}
+{{#parameters.length}}
+### Parameters
+{{/parameters.length}}
+{{#parameters}}
+**{{name}}** &nbsp;{{#types}}`{{.}}` {{/types}}
+{{{description}}}
+{{/parameters}}
+{{#return.length}}
+### Return
+{{/return.length}}
+{{#return}}
+{{#types}}`{{.}}` {{/types}}
+{{{description}}}
+{{/return}}
+{{#desc}}
+### Description
+{{{desc.0.string}}}
+{{/desc}}
+<hr>
+
+{{/content}}
+{{/.}}
+
+
