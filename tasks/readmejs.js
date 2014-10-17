@@ -9,6 +9,7 @@
 'use strict';
 
 var _ = require('lodash');
+var path = require('path');
 var task = require('./lib');
 
 module.exports = function(grunt) {
@@ -18,8 +19,9 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('readmejs', 'generate README.md from source code', function() {
 
+    var modulePath = __dirname + '/templates/module.mustache';
     var templates = {
-      module: grunt.file.read('tasks/templates/module.mustache')
+      module: grunt.file.read(modulePath)
     };
 
     // Merge task-specific and/or target-specific options with these defaults.

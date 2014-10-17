@@ -1,6 +1,6 @@
 {
   "name": "grunt-readmejs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "generate README.md from documented code",
   "repository": "",
   "author": {
