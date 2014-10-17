@@ -43,6 +43,8 @@ module.exports = function (grunt) {
       custom_options: {
         options: {
             showFilePath: true,
+            compressed: true,
+            quoteSummary: true,
             header: 'test/fixtures/header.md',
             footer: 'test/fixtures/footer.md'
         },

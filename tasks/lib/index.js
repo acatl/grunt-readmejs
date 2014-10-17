@@ -65,7 +65,7 @@ function ctxNormalizeValue(block) {
 
     var value = _s.trim(block.ctx.value);
 
-    var invalidMatches = ['{'];
+    var invalidMatches = ['{', '['];
 
     if (invalidMatches.some(function(item) {
         return item === value;

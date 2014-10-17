@@ -1,27 +1,30 @@
 
 ## module-1.js
-
 ### Summary
 hello world
 
-**author**: &nbsp; acatl pacheco 
+**author**: &nbsp; acatl pacheco <acatl.pacheco@gmail.com> <br>
+**version**: &nbsp; 0.1.0 <br>
 
 <hr>
 
 ### Summary
 <p>methodName description</p>
 
-**exports**: &nbsp; methodNameA 
+**exports**: &nbsp; methodNameA <br>
 
 ### Syntax
 `methodNameA(a, b)`
 ### Parameters
-**a** &nbsp;`array` `string` 
+**a** &nbsp;`array` `string` <br>
 first description
-**b** &nbsp;`number` 
+
+**b** &nbsp;`number` <br>
 second description
+
 ### Return
-`string` 
+
+`string` <br>
 
 <hr>
 
@@ -32,12 +35,15 @@ my summary
 ### Syntax
 `methodNameB(a, b)`
 ### Parameters
-**a** &nbsp;`array` `string` 
+**a** &nbsp;`array` `string` <br>
 
-**b** &nbsp;`number` 
+
+**b** &nbsp;`number` <br>
+
 
 ### Return
-`string` 
+
+`string` <br>
 
 ### Description
 my long description is here so whats the deal
@@ -52,23 +58,23 @@ hello.world('test');
 
 
 ## module-2.js
-
 ### Summary
 <p>ConstructorTest description</p>
 
-**constructor**: &nbsp;  
+**constructor**: &nbsp;  <br>
 
 ### Syntax
 `new ConstructorTest(options)`
 ### Parameters
-**options** &nbsp;`Object` 
+**options** &nbsp;`Object` <br>
 config options
+
 <hr>
 
 ### Summary
 <p>isVariable description</p>
 
-**type**: &nbsp;`Boolean`   
+**type**: &nbsp;`Boolean`   <br>
 
 ### Syntax
 `isVariable` : `true`
@@ -77,7 +83,7 @@ config options
 ### Summary
 <p>Settings description</p>
 
-**type**: &nbsp;`Object`   
+**type**: &nbsp;`Object`   <br>
 
 ### Syntax
 `Settings` 
@@ -86,7 +92,7 @@ config options
 ### Summary
 <p>value description</p>
 
-**type**: &nbsp;`String`   
+**type**: &nbsp;`String`   <br>
 
 ### Syntax
 `value` : `'test',`
@@ -95,15 +101,26 @@ config options
 ### Summary
 <p>method description</p>
 
-**memberOf**: &nbsp;  `Settings`
+**memberOf**: &nbsp;  `Settings`<br>
 
 ### Syntax
 ### Parameters
-**a** &nbsp;`Object` 
+**a** &nbsp;`Object` <br>
+
 
 ### Return
-`undefined` 
 
+`undefined` <br>
+
+<hr>
+
+### Summary
+<p>collection description</p>
+
+**type**: &nbsp;`Array`   <br>
+
+### Syntax
+`collection` : `[1,2,3]`
 <hr>
 
 

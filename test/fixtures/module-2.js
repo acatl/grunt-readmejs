@@ -34,7 +34,13 @@ var Settings = {
      */
     method: function(a) {
         // body...
-    }
+    },
+
+    /**
+     * collection description
+     * @type {Array}
+     */
+    collection: [1,2,3]
 };
 
 

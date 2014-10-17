@@ -4,19 +4,18 @@
 {{#options.showFilePath}}
 _{{{filepath}}}_
 {{/options.showFilePath}}
-
 {{#content}}
 {{#description.summary}}
-### Summary
-{{{description.summary}}}
+{{^options.compressed}}### Summary{{/options.compressed}}
+{{#options.quoteSummary}}>{{/options.quoteSummary}}{{{description.summary}}}
 {{/description.summary}}
 
 {{#tags}}
-**{{{type}}}**: &nbsp;{{#types}}`{{.}}` {{/types}} {{{string}}} {{#parent}}`{{{parent}}}`{{/parent}}
+**{{{type}}}**: &nbsp;{{#types}}`{{.}}` {{/types}} {{{string}}} {{#parent}}`{{{parent}}}`{{/parent}}<br>
 {{/tags}}
 
 {{#ctx}}
-### Syntax
+{{^options.compressed}}### Syntax{{/options.compressed}}
 {{#ctx.isConstructor}}
 `new {{name}}({{ctx.parameters}})`
 {{/ctx.isConstructor}}
@@ -31,21 +30,23 @@ _{{{filepath}}}_
 {{/ctx.isProperty}}
 {{/ctx}}
 {{#parameters.length}}
-### Parameters
+{{^options.compressed}}### Parameters{{/options.compressed}}
 {{/parameters.length}}
 {{#parameters}}
-**{{name}}** &nbsp;{{#types}}`{{.}}` {{/types}}
+**{{name}}** &nbsp;{{#types}}`{{.}}` {{/types}}<br>
 {{{description}}}
+
 {{/parameters}}
 {{#return.length}}
-### Return
+{{^options.compressed}}### Return{{/options.compressed}}
+{{#options.compressed}}**Return**{{/options.compressed}}
 {{/return.length}}
 {{#return}}
-{{#types}}`{{.}}` {{/types}}
+{{#types}}`{{.}}` {{/types}}<br>
 {{{description}}}
 {{/return}}
 {{#desc}}
-### Description
+{{^options.compressed}}### Description{{/options.compressed}}
 {{{desc.0.string}}}
 {{/desc}}
 <hr>

@@ -1,6 +1,7 @@
 /**
  * @summary hello world
- * @author acatl pacheco
+ * @author acatl pacheco <acatl.pacheco@gmail.com>
+ * @version  0.1.0
  */
 
 /**

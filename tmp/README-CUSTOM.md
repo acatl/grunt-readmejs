@@ -1,47 +1,53 @@
-# Documentation Header
+# Header
 
 ## module-1.js
 _test/fixtures/module-1.js_
 
-### Summary
-hello world
+>hello world
 
-**author**: &nbsp; acatl pacheco 
+**author**: &nbsp; acatl pacheco <acatl.pacheco@gmail.com> <br>
+**version**: &nbsp; 0.1.0 <br>
 
 <hr>
 
-### Summary
-<p>methodName description</p>
 
-**exports**: &nbsp; methodNameA 
+><p>methodName description</p>
 
-### Syntax
+**exports**: &nbsp; methodNameA <br>
+
+
 `methodNameA(a, b)`
-### Parameters
-**a** &nbsp;`array` `string` 
+
+**a** &nbsp;`array` `string` <br>
 first description
-**b** &nbsp;`number` 
+
+**b** &nbsp;`number` <br>
 second description
-### Return
-`string` 
+
+
+**Return**
+`string` <br>
 
 <hr>
 
-### Summary
-my summary
+
+>my summary
 
 
-### Syntax
+
 `methodNameB(a, b)`
-### Parameters
-**a** &nbsp;`array` `string` 
 
-**b** &nbsp;`number` 
+**a** &nbsp;`array` `string` <br>
 
-### Return
-`string` 
 
-### Description
+**b** &nbsp;`number` <br>
+
+
+
+**Return**
+`string` <br>
+
+
 my long description is here so whats the deal
 
 ```js
@@ -56,61 +62,70 @@ hello.world('test');
 ## module-2.js
 _test/fixtures/module-2.js_
 
-### Summary
-<p>ConstructorTest description</p>
+><p>ConstructorTest description</p>
 
-**constructor**: &nbsp;  
+**constructor**: &nbsp;  <br>
 
-### Syntax
+
 `new ConstructorTest(options)`
-### Parameters
-**options** &nbsp;`Object` 
+
+**options** &nbsp;`Object` <br>
 config options
+
 <hr>
 
-### Summary
-<p>isVariable description</p>
 
-**type**: &nbsp;`Boolean`   
+><p>isVariable description</p>
 
-### Syntax
+**type**: &nbsp;`Boolean`   <br>
+
+
 `isVariable` : `true`
 <hr>
 
-### Summary
-<p>Settings description</p>
 
-**type**: &nbsp;`Object`   
+><p>Settings description</p>
 
-### Syntax
+**type**: &nbsp;`Object`   <br>
+
+
 `Settings` 
 <hr>
 
-### Summary
-<p>value description</p>
 
-**type**: &nbsp;`String`   
+><p>value description</p>
 
-### Syntax
+**type**: &nbsp;`String`   <br>
+
+
 `value` : `'test',`
 <hr>
 
-### Summary
-<p>method description</p>
 
-**memberOf**: &nbsp;  `Settings`
+><p>method description</p>
 
-### Syntax
-### Parameters
-**a** &nbsp;`Object` 
+**memberOf**: &nbsp;  `Settings`<br>
 
-### Return
-`undefined` 
+
+
+**a** &nbsp;`Object` <br>
+
+
+
+**Return**
+`undefined` <br>
 
 <hr>
 
 
+><p>collection description</p>
 
-<hr> 
+**type**: &nbsp;`Array`   <br>
 
-# DOCUMENTATION FOOTER
+
+`collection` : `[1,2,3]`
+<hr>
+
+
+
+# FOOTER

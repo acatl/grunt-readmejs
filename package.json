@@ -1,6 +1,6 @@
 {
   "name": "grunt-readmejs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "generate README.md from documented code",
   "repository": "",
   "author": {
@@ -14,6 +14,13 @@
     "markdown"
   ],
   "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acatl/grunt-readmejs"
+  },
+  "bugs": {
+    "url": "https://github.com/acatl/grunt-readmejs/issues"
+  },
   "engines": {
     "node": ">= 0.8.0"
   },

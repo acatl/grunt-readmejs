@@ -26,10 +26,11 @@ module.exports = function(grunt) {
 
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      separator: '',
       header: '',
       footer: '',
-      showFilePath: false
+      showFilePath: false,
+      compressed: false,
+      quoteSummary: false
     });
 
     // Iterate over all specified file groups.
@@ -53,7 +54,7 @@ module.exports = function(grunt) {
         .map(task.removeIgnored)
         .map(_.partial(task.transformContent, options))
         .map(_.partial(task.toMarkdown, templates))
-        .join(grunt.util.normalizelf(options.separator));
+        .join(grunt.util.normalizelf(''));
 
       var header = '';
       if (options.header) {
