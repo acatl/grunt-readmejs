@@ -1,4 +1,4 @@
-# grunt-readmejs
+# grunt-readmejs [![Build Status](https://travis-ci.org/acatl/grunt-readmejs.svg)](https://travis-ci.org/acatl/grunt-readmejs)
 
 > generate README.md from documented code
 
