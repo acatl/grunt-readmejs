@@ -30,7 +30,7 @@ In your project's Gruntfile, add a section named `readmejs` to the data object p
 grunt.initConfig({
   readmejs: {
     options: {
-      separator: '-----------------------',
+      separator: '----------------------',
     },
     index: {
       options: {
