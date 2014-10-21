@@ -18,6 +18,29 @@ function parseComments(resource) {
 }
 exports.parseComments = parseComments;
 
+
+function isIndexJs(str){
+  return str.indexOf('index.js') > -1 ? true : false;
+}
+
+function bubbleUpIndexJs(a, b){
+  var aPath = a.slice(0, a.lastIndexOf('/'));
+  var bPath = b.slice(0, b.lastIndexOf('/'));
+
+  if(isIndexJs(a)){
+    return (aPath === bPath) ? -1 : 0;
+  }
+
+  if(isIndexJs(b)){
+    return (aPath === bPath) ? 1 : 0;
+  }
+
+  return 0;
+}
+
+exports.bubbleUpIndexJs = bubbleUpIndexJs;
+
+
 function extractTag(type, propertyName, block) {
     var tags = block.tags || [];
     var result = _.filter(tags, {

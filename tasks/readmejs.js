@@ -33,11 +33,14 @@ module.exports = function(grunt) {
       quoteSummary: false
     });
 
+
     // Iterate over all specified file groups.
     this.files.forEach(function(file) {
+
       // Concat specified files.
       var src = file.src.filter(function(filepath) {
           // Warn on and remove invalid source files (if nonull was set).
+
           if (!grunt.file.exists(filepath)) {
             grunt.log.warn('Source file "' + filepath + '" not found.');
             return false;
@@ -45,6 +48,7 @@ module.exports = function(grunt) {
             return true;
           }
         })
+        .sort(task.bubbleUpIndexJs)
         .map(function(filepath) {
           var resource = new task.Resource(filepath, grunt.file.read(filepath));
           // Read file source.
