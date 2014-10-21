@@ -1,4 +1,82 @@
 
+## index.js
+### Summary
+app configure
+
+**author**: &nbsp; acatl pacheco <tkthompson@gmail.com> <br>
+**version**: &nbsp; 0.1.0 <br>
+
+<hr>
+
+### Summary
+<p>methodName description</p>
+
+**exports**: &nbsp; configure <br>
+
+### Syntax
+<hr>
+
+
+
+
+## 00-module.js
+### Summary
+hello world
+
+**author**: &nbsp; acatl pacheco <acatl.pacheco@gmail.com> <br>
+**version**: &nbsp; 0.1.0 <br>
+
+<hr>
+
+### Summary
+<p>methodName description</p>
+
+**exports**: &nbsp; methodName0A <br>
+
+### Syntax
+`methodName0A(a, b)`
+### Parameters
+**a** &nbsp;`array` `string` <br>
+first description
+
+**b** &nbsp;`number` <br>
+second description
+
+### Return
+
+`string` <br>
+
+<hr>
+
+### Summary
+my summary
+
+
+### Syntax
+`methodName0B(a, b)`
+### Parameters
+**a** &nbsp;`array` `string` <br>
+
+
+**b** &nbsp;`number` <br>
+
+
+### Return
+
+`string` <br>
+
+### Description
+my long description is here so whats the deal
+
+```js
+hello.world('test');
+```
+
+<hr>
+
+
+
+
 ## module-1.js
 ### Summary
 hello world
@@ -121,6 +199,141 @@ config options
 
 ### Syntax
 `collection` : `[1,2,3]`
+<hr>
+
+
+
+
+## index.js
+### Summary
+subApp configure
+
+**author**: &nbsp; acatl pacheco <tkthompson@gmail.com> <br>
+**version**: &nbsp; 0.1.0 <br>
+
+<hr>
+
+### Summary
+<p>methodName configure</p>
+
+
+### Syntax
+<hr>
+
+
+
+
+## 00-module.js
+### Summary
+hello world
+
+**author**: &nbsp; acatl pacheco <acatl.pacheco@gmail.com> <br>
+**version**: &nbsp; 0.1.0 <br>
+
+<hr>
+
+### Summary
+<p>methodName description</p>
+
+**exports**: &nbsp; subMethodName0A <br>
+
+### Syntax
+`subMethodName0A(a, b)`
+### Parameters
+**a** &nbsp;`array` `string` <br>
+first description
+
+**b** &nbsp;`number` <br>
+second description
+
+### Return
+
+`string` <br>
+
+<hr>
+
+### Summary
+my summary
+
+
+### Syntax
+`subMethodName0B(a, b)`
+### Parameters
+**a** &nbsp;`array` `string` <br>
+
+
+**b** &nbsp;`number` <br>
+
+
+### Return
+
+`string` <br>
+
+### Description
+my long description is here so whats the deal
+
+```js
+hello.world('test');
+```
+
+<hr>
+
+
+
+
+## 01-module.js
+### Summary
+hello world
+
+**author**: &nbsp; acatl pacheco <acatl.pacheco@gmail.com> <br>
+**version**: &nbsp; 0.1.0 <br>
+
+<hr>
+
+### Summary
+<p>methodName description</p>
+
+**exports**: &nbsp; methodName0A <br>
+
+### Syntax
+`subMethodName1A(a, b)`
+### Parameters
+**a** &nbsp;`array` `string` <br>
+first description
+
+**b** &nbsp;`number` <br>
+second description
+
+### Return
+
+`string` <br>
+
+<hr>
+
+### Summary
+my summary
+
+
+### Syntax
+`subMethodName1B(a, b)`
+### Parameters
+**a** &nbsp;`array` `string` <br>
+
+
+**b** &nbsp;`number` <br>
+
+
+### Return
+
+`string` <br>
+
+### Description
+my long description is here so whats the deal
+
+```js
+hello.world('test');
+```
+
 <hr>
 
 

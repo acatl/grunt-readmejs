@@ -33,19 +33,26 @@ module.exports = function(grunt) {
       quoteSummary: false
     });
 
+
     // Iterate over all specified file groups.
     this.files.forEach(function(file) {
+
       // Concat specified files.
       var src = file.src.filter(function(filepath) {
           // Warn on and remove invalid source files (if nonull was set).
+
           if (!grunt.file.exists(filepath)) {
             grunt.log.warn('Source file "' + filepath + '" not found.');
             return false;
           } else {
             return true;
           }
-        })
-        .map(function(filepath) {
+        });
+
+        var multiDemArr = task.getMultiDemensionalArray(src);
+        var flatArr = task.reorderFilepaths(multiDemArr);
+
+        src = flatArr.map(function(filepath) {
           var resource = new task.Resource(filepath, grunt.file.read(filepath));
           // Read file source.
           return resource;

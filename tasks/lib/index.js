@@ -18,6 +18,62 @@ function parseComments(resource) {
 }
 exports.parseComments = parseComments;
 
+
+function getMultiDemensionalArray(arr) {
+    var parentArr = [];
+    var childArr = [];
+
+    var reduceResult = _.reduce(arr, function (previous, next) {
+
+        var prevDir;
+        var nextDir;
+
+        if(previous !== null){
+            prevDir = previous.slice(0, previous.lastIndexOf('/'));
+            nextDir = next.slice(0, next.lastIndexOf('/'));
+            if(prevDir !== nextDir){
+                parentArr.push(_.clone(childArr));
+                childArr = [];
+            }
+        }
+
+        childArr.push(next);
+
+        return next;
+
+    }, null);
+
+    parentArr.push(_.clone(childArr));
+
+    return parentArr;
+}
+
+exports.getMultiDemensionalArray = getMultiDemensionalArray;
+
+
+function reorderFilepaths (multiDemArr) {
+
+    multiDemArr.forEach(function (childArr) {
+        var i=0;
+        var len = childArr.length;
+        var filepath;
+
+        for(; i < len; i++){
+            filepath = childArr[i];
+            if(filepath.indexOf("index.") > -1){
+                childArr.unshift(childArr.splice(i,1)[0]);
+                break;
+            }
+        }
+
+    });
+
+    return _.flatten(multiDemArr, true);
+}
+
+exports.reorderFilepaths = reorderFilepaths;
+
+
 function extractTag(type, propertyName, block) {
     var tags = block.tags || [];
     var result = _.filter(tags, {
