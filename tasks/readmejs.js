@@ -47,12 +47,9 @@ module.exports = function(grunt) {
           } else {
             return true;
           }
-        });
-
-        var multiDemArr = task.getMultiDemensionalArray(src);
-        var flatArr = task.reorderFilepaths(multiDemArr);
-
-        src = flatArr.map(function(filepath) {
+        })
+        .sort(task.bubbleUpIndexJs)
+        .map(function(filepath) {
           var resource = new task.Resource(filepath, grunt.file.read(filepath));
           // Read file source.
           return resource;

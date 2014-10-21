@@ -19,59 +19,26 @@ function parseComments(resource) {
 exports.parseComments = parseComments;
 
 
-function getMultiDemensionalArray(arr) {
-    var parentArr = [];
-    var childArr = [];
-
-    var reduceResult = _.reduce(arr, function (previous, next) {
-
-        var prevDir;
-        var nextDir;
-
-        if(previous !== null){
-            prevDir = previous.slice(0, previous.lastIndexOf('/'));
-            nextDir = next.slice(0, next.lastIndexOf('/'));
-            if(prevDir !== nextDir){
-                parentArr.push(_.clone(childArr));
-                childArr = [];
-            }
-        }
-
-        childArr.push(next);
-
-        return next;
-
-    }, null);
-
-    parentArr.push(_.clone(childArr));
-
-    return parentArr;
+function isIndexJs(str){
+  return str.indexOf('index.js') > -1 ? true : false;
 }
 
-exports.getMultiDemensionalArray = getMultiDemensionalArray;
+function bubbleUpIndexJs(a, b){
+  var aPath = a.slice(0, a.lastIndexOf('/'));
+  var bPath = b.slice(0, b.lastIndexOf('/'));
 
+  if(isIndexJs(a)){
+    return (aPath === bPath) ? -1 : 0;
+  }
 
-function reorderFilepaths (multiDemArr) {
+  if(isIndexJs(b)){
+    return (aPath === bPath) ? 1 : 0;
+  }
 
-    multiDemArr.forEach(function (childArr) {
-        var i=0;
-        var len = childArr.length;
-        var filepath;
-
-        for(; i < len; i++){
-            filepath = childArr[i];
-            if(filepath.indexOf("index.") > -1){
-                childArr.unshift(childArr.splice(i,1)[0]);
-                break;
-            }
-        }
-
-    });
-
-    return _.flatten(multiDemArr, true);
+  return 0;
 }
 
-exports.reorderFilepaths = reorderFilepaths;
+exports.bubbleUpIndexJs = bubbleUpIndexJs;
 
 
 function extractTag(type, propertyName, block) {
